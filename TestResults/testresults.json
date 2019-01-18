@@ -2,14 +2,14 @@
   "stats": {
     "suites": 4,
     "tests": 10,
-    "passes": 10,
+    "passes": 9,
     "pending": 0,
-    "failures": 0,
-    "start": "2019-01-18T20:31:07.027Z",
-    "end": "2019-01-18T20:31:07.317Z",
-    "duration": 290,
+    "failures": 1,
+    "start": "2019-01-18T20:34:36.999Z",
+    "end": "2019-01-18T20:34:37.435Z",
+    "duration": 436,
     "testsRegistered": 10,
-    "passPercent": 100,
+    "passPercent": 90,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -19,7 +19,7 @@
     "pendingPercentClass": "danger"
   },
   "suites": {
-    "uuid": "9564c36e-a86c-49f2-887f-20550cbf01b0",
+    "uuid": "fa50b2c7-34a7-44f1-87d5-e5c2a4bd6bff",
     "title": "",
     "fullFile": "",
     "file": "",
@@ -28,7 +28,7 @@
     "tests": [],
     "suites": [
       {
-        "uuid": "12c10d23-50ed-473c-9984-11103baacac8",
+        "uuid": "ef0c28db-90da-4dc3-9d86-cff5140b5be8",
         "title": "Git Checks",
         "fullFile": "/Users/joannathecoder/00-class-profile/test/test.js",
         "file": "/test/test.js",
@@ -37,14 +37,14 @@
             "title": "\"before all\" hook",
             "fullTitle": "Git Checks \"before all\" hook",
             "timedOut": false,
-            "duration": 253,
+            "duration": 394,
             "pass": false,
             "fail": false,
             "pending": false,
             "code": "this.timeout(0);\ngitCommits(repoPath) \n  .on('data', function (commit) {\n    if (!matchesProfEmail(commit.author.email, ignoreCommitEmails))\n    {\n      studentCommits++;\n    }\n  })\n  .on('end', function () {\n  })\n;\ngitCheck  = gitState.checkSync('./', function(r,e) {\n  //return [r, e];\n});\ndone();",
             "err": {},
             "isRoot": false,
-            "uuid": "0cddf032-2033-443a-be42-f68434a0c3d6",
+            "uuid": "3584bf46-00b6-4df8-9a40-daa0d6192dc8",
             "isHook": true,
             "skipped": false
           }
@@ -64,7 +64,7 @@
             "code": "expect(studentCommits).to.be.at.least(minCommits);",
             "err": {},
             "isRoot": false,
-            "uuid": "8b57f3bb-c41e-4e0a-ace5-ee98cb6671dc",
+            "uuid": "5269729d-e2e8-443b-9c40-07dd59c782dd",
             "isHook": false,
             "skipped": false
           },
@@ -72,7 +72,7 @@
             "title": "Git should be configured with username and email information",
             "fullTitle": "Git Checks Git should be configured with username and email information",
             "timedOut": false,
-            "duration": 0,
+            "duration": 1,
             "state": "passed",
             "speed": "fast",
             "pass": true,
@@ -81,7 +81,7 @@
             "code": "expect(name, 'your Git user name has not been set').not.to.be.undefined;\nexpect(email, 'your Git email has not been set').not.to.be.undefined;\nexpect(githubid, 'your Github user name has not been set').not.to.be.undefined;",
             "err": {},
             "isRoot": false,
-            "uuid": "4d0336ee-51a8-40dd-a351-d6aaf155b11b",
+            "uuid": "8b442409-825a-4931-9026-635136001210",
             "isHook": false,
             "skipped": false
           },
@@ -89,7 +89,7 @@
             "title": "All changes in checked-in files should be committed to Git (OK for this to fail while you are still working)",
             "fullTitle": "Git Checks All changes in checked-in files should be committed to Git (OK for this to fail while you are still working)",
             "timedOut": false,
-            "duration": 1,
+            "duration": 0,
             "state": "passed",
             "speed": "fast",
             "pass": true,
@@ -98,7 +98,7 @@
             "code": "expect(gitCheck.dirty, 'looks like you have changed some files and not committed the changes yet').to.equal(0);",
             "err": {},
             "isRoot": false,
-            "uuid": "e25a3d53-d604-42bc-a14d-3d7171e6e3dd",
+            "uuid": "01415190-4254-44e0-8d22-4f37a091bc93",
             "isHook": false,
             "skipped": false
           },
@@ -115,17 +115,17 @@
             "code": "expect(gitCheck.untracked, 'looks like you have some files in the directory which have not been added to the repository. \\n      Make sure your answers do not rely on them, or tests will fail on the server.').to.equal(0);",
             "err": {},
             "isRoot": false,
-            "uuid": "b35db8fd-05bc-4be2-bd18-f5ce45c78dea",
+            "uuid": "2aa37b8b-176f-458d-83e3-21cc4e2cc8c4",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "8b57f3bb-c41e-4e0a-ace5-ee98cb6671dc",
-          "4d0336ee-51a8-40dd-a351-d6aaf155b11b",
-          "e25a3d53-d604-42bc-a14d-3d7171e6e3dd",
-          "b35db8fd-05bc-4be2-bd18-f5ce45c78dea"
+          "5269729d-e2e8-443b-9c40-07dd59c782dd",
+          "8b442409-825a-4931-9026-635136001210",
+          "01415190-4254-44e0-8d22-4f37a091bc93",
+          "2aa37b8b-176f-458d-83e3-21cc4e2cc8c4"
         ],
         "failures": [],
         "pending": [],
@@ -136,7 +136,7 @@
         "_timeout": 0
       },
       {
-        "uuid": "c93a34a1-b53b-493f-9d22-e09bdaabe7ae",
+        "uuid": "b8d37ccc-8917-4040-bbd2-f47e99758dc1",
         "title": "JSON Checks",
         "fullFile": "/Users/joannathecoder/00-class-profile/test/test.js",
         "file": "/test/test.js",
@@ -145,14 +145,14 @@
             "title": "\"before all\" hook",
             "fullTitle": "JSON Checks \"before all\" hook",
             "timedOut": false,
-            "duration": 0,
+            "duration": 1,
             "pass": false,
             "fail": false,
             "pending": false,
             "code": "// read the JSON file",
             "err": {},
             "isRoot": false,
-            "uuid": "9d4e3dc3-2d85-4d2f-b141-12f735f66c4b",
+            "uuid": "79f67be6-3e98-41c9-bd53-22337fa7df24",
             "isHook": true,
             "skipped": false
           }
@@ -172,7 +172,7 @@
             "code": "let p = `students/${githubid}.json`;\nexpect(p).to.be.a.file();",
             "err": {},
             "isRoot": false,
-            "uuid": "8c3d6d57-459d-4a48-8621-356d5eeb745f",
+            "uuid": "2ac67255-113c-4ff5-a2e6-2740ef09f7c3",
             "isHook": false,
             "skipped": false
           },
@@ -189,7 +189,7 @@
             "code": "let p = `students/${githubid}.json`;\nexpect(jlint(p), `Do your best to make sense of the error message below. If you have\ncreated a syntax error, the debugger will try to find the mistake, but\noften the error will only be detected several lines after its *actual*\nsource. Be on the lookout especially for mising quotation marks,\ncommas, braces (\"{}\"), etc. Often the *closing* parenthsis, brace, or\nquotation mark will be missing and cause an error.\n\n`).to.not.be.an('error');",
             "err": {},
             "isRoot": false,
-            "uuid": "af7885a7-fdac-4550-8049-80ba33e7fc77",
+            "uuid": "2c589152-3df5-447c-bb49-1cd4e480e62e",
             "isHook": false,
             "skipped": false
           },
@@ -206,16 +206,16 @@
             "code": "let j = JSON.parse(fs.readFileSync(`students/${githubid}.json`, 'utf8'));\nexpect(j.lastName, 'your JSON file does not record your last name!').to.be.a('string').that.is.not.empty;\nexpect(j.firstName, 'your JSON file does not record your first name!').to.be.a('string').that.is.not.empty;\nexpect(j.github, 'your gituhubid doesn\\'t seem to be recorded properly').to.equal(githubid);\nexpect(j.picture, 'your JSON file does not record your picture URL or path').to.be.a('string').that.is.not.empty;",
             "err": {},
             "isRoot": false,
-            "uuid": "cd6c9da6-235c-4c19-b121-0f86568a4ec6",
+            "uuid": "0107f593-607b-4549-9e27-197f26ffd3e6",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "8c3d6d57-459d-4a48-8621-356d5eeb745f",
-          "af7885a7-fdac-4550-8049-80ba33e7fc77",
-          "cd6c9da6-235c-4c19-b121-0f86568a4ec6"
+          "2ac67255-113c-4ff5-a2e6-2740ef09f7c3",
+          "2c589152-3df5-447c-bb49-1cd4e480e62e",
+          "0107f593-607b-4549-9e27-197f26ffd3e6"
         ],
         "failures": [],
         "pending": [],
@@ -226,7 +226,7 @@
         "_timeout": 0
       },
       {
-        "uuid": "239a547c-cde5-4c3f-ad6d-041e23628bb2",
+        "uuid": "826e45b5-ca74-4540-915a-3bc93b4c9099",
         "title": "Image Checks",
         "fullFile": "/Users/joannathecoder/00-class-profile/test/test.js",
         "file": "/test/test.js",
@@ -237,34 +237,36 @@
             "title": "Image file with title yourGithubID.jpg should exist in \"images\" directory",
             "fullTitle": "Image Checks Image file with title yourGithubID.jpg should exist in \"images\" directory",
             "timedOut": false,
-            "duration": 0,
-            "state": "passed",
-            "speed": "fast",
-            "pass": true,
-            "fail": false,
+            "duration": 2,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
             "pending": false,
             "code": "let p = `images/${githubid}.jpg`;\nexpect(p).to.be.a.file();",
-            "err": {},
+            "err": {
+              "message": "AssertionError: value: expected 'images/joannablenke.jpg' to exist",
+              "estack": "AssertionError: value: expected 'images/joannablenke.jpg' to exist\n    at Proxy.<anonymous> (node_modules/chai-fs/lib/assertions/file.js:21:53)\n    at Proxy.methodWrapper (node_modules/chai/lib/chai/utils/addMethod.js:57:25)\n    at Context.<anonymous> (test/test.js:137:23)"
+            },
             "isRoot": false,
-            "uuid": "817339d0-9a16-4352-88b7-98cfdc0984b9",
+            "uuid": "04604aa1-e514-43e0-8c0e-d469ed9b8ad4",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
-        "passes": [
-          "817339d0-9a16-4352-88b7-98cfdc0984b9"
+        "passes": [],
+        "failures": [
+          "04604aa1-e514-43e0-8c0e-d469ed9b8ad4"
         ],
-        "failures": [],
         "pending": [],
         "skipped": [],
-        "duration": 0,
+        "duration": 2,
         "root": false,
         "rootEmpty": false,
         "_timeout": 0
       },
       {
-        "uuid": "c8e1b40d-52aa-449b-8f34-7bd618b7189d",
+        "uuid": "7252b686-7bc2-4e98-8071-38a05d4cae50",
         "title": "Reflection Checks (not required unless you are attempting an \"A\" grade!)",
         "fullFile": "/Users/joannathecoder/00-class-profile/test/test.js",
         "file": "/test/test.js",
@@ -284,7 +286,7 @@
             "code": "let r = `Reflection/${githubid}.md`;\nexpect(r, `I can't find the file ${r}`).to.be.a.file();",
             "err": {},
             "isRoot": false,
-            "uuid": "0d71a167-130b-42b7-b7a0-5e84a2a42c53",
+            "uuid": "63f129e9-de6f-4a1d-b684-141a35ec48f9",
             "isHook": false,
             "skipped": false
           },
@@ -301,15 +303,15 @@
             "code": "let content=fs.readFileSync(`Reflection/${githubid}.md`, 'utf-8');\nexpect(hwc(content), '').to.be.approximately(525,100);",
             "err": {},
             "isRoot": false,
-            "uuid": "1258b26f-ccbd-491c-a023-b9245aa11527",
+            "uuid": "9537dcad-655b-402b-bf26-63e3fb1a5de1",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "0d71a167-130b-42b7-b7a0-5e84a2a42c53",
-          "1258b26f-ccbd-491c-a023-b9245aa11527"
+          "63f129e9-de6f-4a1d-b684-141a35ec48f9",
+          "9537dcad-655b-402b-bf26-63e3fb1a5de1"
         ],
         "failures": [],
         "pending": [],
